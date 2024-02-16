@@ -20,7 +20,7 @@ getIdeo <- function(ideoSource) {
     
     session <- browserSession();
     genome(session) <- ideoSource;
-    cytoTable <- getTable(ucscTableQuery(session,"cytoBandIdeo"))
+    cytoTable <- getTable(ucscTableQuery(session,table="cytoBandIdeo"))
     
     return(cytoTable)
 ### (data.frame) ideogram table
